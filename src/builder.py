@@ -90,10 +90,10 @@ def import_features(g, customers, articles, cstmr_id, itm_id):
                         customers.gender.values),
                      axis=1)
 
-    #user_feat = np.zeros((g.number_of_nodes('user'), 2))
-    #user_feat[ids] = feats
+    user_feat = np.zeros((g.number_of_nodes('user'), 2))
+    user_feat[ids] = feats
 
-    user_feat = torch.tensor(customers[['age','gender']].values.astype('float')).float()
+    user_feat = torch.tensor(user_feat).float()
     
     feature_dict['user_feat'] = user_feat
 

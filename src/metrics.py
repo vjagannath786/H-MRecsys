@@ -132,13 +132,13 @@ def create_ground_truth(users, items):
 
     df = df.groupby(['customer_id']).agg({'article_id':list}).reset_index()
 
-    print(df)
+    #print(df)
     return df
 
 
 def recs_to_metrics(recs, ground_truth_df):
     
-    print(recs)
+    #print(recs)
     
     df = pd.DataFrame()
 
@@ -146,7 +146,7 @@ def recs_to_metrics(recs, ground_truth_df):
 
     df['article_id_pred'] = recs.values()
 
-    print(df)
+    #print(df)
 
     
     #df.columns = ['customer_id', 'article_id']

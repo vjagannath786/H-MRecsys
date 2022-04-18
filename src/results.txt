@@ -149,3 +149,248 @@ Epoch took 0:00:01.515807
 Epoch 00001 | Training Loss 0.04466 | Validation Loss 0.03887 | 
 Epoch took 0:00:00.860404 
 
+
+ 
+ START - Hyperparameters 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': True 
+
+Epoch 00000 | Training Loss 0.06429 | Validation Loss 0.02954 | 
+Epoch took 0:00:02.033836 
+
+
+ 
+ START - Hyperparameters 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.05661 | Validation Loss 0.05023 | 
+Epoch took 0:00:01.945487 
+
+
+ 
+ START - Hyperparameters 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.06426 | Validation Loss 0.06899 | 
+Epoch took 0:00:02.224424 
+
+TEST MAP 0.020% 
+
+ 
+ START - Hyperparameters 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.05276 | Validation Loss 0.03580 | 
+Epoch took 0:00:01.003945 
+
+Epoch 00001 | Training Loss 0.05474 | Validation Loss 0.03223 | 
+Epoch took 0:00:00.293368 
+
+TEST MAP 0.000% 
+
+ 
+ START - Hyperparameters 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.05989 | Validation Loss 0.02983 | 
+Epoch took 0:00:01.062596 
+
+Epoch 00001 | Training Loss 0.05987 | Validation Loss 0.02514 | 
+Epoch took 0:00:00.300600 
+
+TEST MAP 0.000% 
+
+ 
+ START - Hyperparameters 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.05950 | Validation Loss 0.07217 | 
+Epoch took 0:00:02.350356 
+
+Epoch 00001 | Training Loss 0.05934 | Validation Loss 0.07208 | 
+Epoch took 0:00:01.738978 
+
+TEST MAP 0.000% 
+
+ 
+ START - Hyperparameters 
+'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.05059 | Validation Loss 0.02546 | 
+Epoch took 0:00:01.293329 
+
+Epoch 00001 | Training Loss 0.05133 | Validation Loss 0.03374 | 
+Epoch took 0:00:00.439606 
+
+TEST MAP 0.007% 
+clear
+
+ 
+ START - Hyperparameters 
+'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.04993 | Validation Loss 0.04074 | 
+Epoch took 0:00:01.634649 
+
+Epoch 00001 | Training Loss 0.05102 | Validation Loss 0.04005 | 
+Epoch took 0:00:00.487442 
+
+TEST MAP 0.001% 
+
+ 
+ START - Hyperparameters 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.05059 | Validation Loss 0.04581 | 
+Epoch took 0:00:01.084587 
+
+Epoch 00001 | Training Loss 0.05128 | Validation Loss 0.04878 | 
+Epoch took 0:00:00.299118 
+
+TEST MAP 0.004% 
+
+ 
+ START - Hyperparameters 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.05390 | Validation Loss 0.04578 | 
+Epoch took 0:00:01.104140 
+
+Epoch 00001 || TRAINING Loss 0.04999 |  TRAINING MAP 0.000
+                || VALIDATION Loss 0.05814 |  VALIDATION MAP 0.000
+Epoch took 0:00:01.863349 
+
+TEST MAP 0.000% 
+
+ 
+ START - Hyperparameters 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.04954 | Validation Loss 0.04164 | 
+Epoch took 0:00:01.038754 
+
+Epoch 00001 || TRAINING Loss 0.05000 |  TRAINING MAP 25.000
+                || VALIDATION Loss 0.04458 |  VALIDATION MAP 0.000
+Epoch took 0:00:01.677898 
+
+Epoch 00002 | Training Loss 0.05022 | Validation Loss 0.04549 | 
+Epoch took 0:00:00.302577 
+
+Epoch 00003 | Training Loss 0.04975 | Validation Loss 0.04698 | 
+Epoch took 0:00:00.305719 
+
+Epoch 00004 | Training Loss 0.05025 | Validation Loss 0.04843 | 
+Epoch took 0:00:00.292675 
+
+Epoch 00005 | Training Loss 0.04975 | Validation Loss 0.05063 | 
+TEST MAP 0.000% 
+
+ 
+ START - Hyperparameters 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.05074 | Validation Loss 0.04139 | 
+Epoch took 0:00:01.261814 
+
+Epoch 00001 || TRAINING Loss 0.04988 |  TRAINING MAP 0.000
+                || VALIDATION Loss 0.04285 |  VALIDATION MAP 0.000
+Epoch took 0:00:01.458574 
+
+Epoch 00002 | Training Loss 0.04986 | Validation Loss 0.04423 | 
+Epoch took 0:00:00.294816 
+
+Epoch 00003 | Training Loss 0.05090 | Validation Loss 0.04572 | 
+Epoch took 0:00:00.286382 
+
+Epoch 00004 | Training Loss 0.04969 | Validation Loss 0.04712 | 
+Epoch took 0:00:00.349930 
+
+Epoch 00005 | Training Loss 0.04978 | Validation Loss 0.04777 | 
+TEST MAP 0.000% 
+
+ 
+ START - Hyperparameters 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.04879 | Validation Loss 0.05828 | 
+Epoch took 0:00:01.489892 
+
+Epoch 00001 || TRAINING Loss 0.04792 |  TRAINING MAP 0.000
+                || VALIDATION Loss 0.05460 |  VALIDATION MAP 0.215
+Epoch took 0:00:08.911013 
+
+Epoch 00002 | Training Loss 0.04633 | Validation Loss 0.05518 | 
+Epoch took 0:00:01.172437 
+
+Epoch 00003 | Training Loss 0.04472 | Validation Loss 0.05415 | 
+Epoch took 0:00:00.880252 
+
+Epoch 00004 | Training Loss 0.04314 | Validation Loss 0.05483 | 
+Epoch took 0:00:01.092536 
+
+Epoch 00005 | Training Loss 0.04250 | Validation Loss 0.05249 | 
+Epoch took 0:00:00.882347 
+
+Epoch 00006 | Training Loss 0.04085 | Validation Loss 0.04506 | 
+Epoch took 0:00:00.916309 
+
+Epoch 00007 | Training Loss 0.03997 | Validation Loss 0.04421 | 
+Epoch took 0:00:00.872307 
+
+Epoch 00008 | Training Loss 0.03950 | Validation Loss 0.04996 | 
+Epoch took 0:00:00.893106 
+
+Epoch 00009 | Training Loss 0.03871 | Validation Loss 0.04085 | 
+Epoch took 0:00:00.894597 
+
+TEST MAP 0.000% 
+
+ 
+ START - Hyperparameters 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.05019 | Validation Loss 0.05145 | 
+Epoch took 0:00:01.791202 
+
+Epoch 00001 || TRAINING Loss 0.05025 |  TRAINING MAP 0.000
+                || VALIDATION Loss 0.05974 |  VALIDATION MAP 0.066
+Epoch took 0:00:08.787992 
+
+Epoch 00002 | Training Loss 0.04590 | Validation Loss 0.06929 | 
+Epoch took 0:00:01.073059 
+
+Epoch 00003 | Training Loss 0.04349 | Validation Loss 0.06148 | 
+Epoch took 0:00:00.898498 
+
+Epoch 00004 | Training Loss 0.04105 | Validation Loss 0.05852 | 
+Epoch took 0:00:00.894721 
+
+Epoch 00005 | Training Loss 0.04054 | Validation Loss 0.05254 | 
+TEST MAP 0.000% 
+
+ 
+ START - Hyperparameters 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 || TRAINING Loss 0.05102 |  TRAINING MAP 0.214
+                || VALIDATION Loss 0.04611 |  VALIDATION MAP 0.000
+Epoch took 0:00:09.449451 
+
+Epoch 00001 || TRAINING Loss 0.05273 |  TRAINING MAP 0.000
+                || VALIDATION Loss 0.06272 |  VALIDATION MAP 0.000
+Epoch took 0:00:09.212354 
+
+Epoch 00002 || TRAINING Loss 0.04495 |  TRAINING MAP 0.000
+                || VALIDATION Loss 0.05909 |  VALIDATION MAP 0.000
+Epoch took 0:00:08.973889 
+
+Epoch 00003 || TRAINING Loss 0.04132 |  TRAINING MAP 0.000
+                || VALIDATION Loss 0.05717 |  VALIDATION MAP 0.050
+Epoch took 0:00:09.050977 
+
+Epoch 00004 || TRAINING Loss 0.04071 |  TRAINING MAP 0.000
+                || VALIDATION Loss 0.05574 |  VALIDATION MAP 0.016
+Epoch took 0:00:08.815532 
+
+Epoch 00005 || TRAINING Loss 0.03990 |  TRAINING MAP 0.000
+                || VALIDATION Loss 0.05690 |  VALIDATION MAP 0.000
+TEST MAP 0.000% 

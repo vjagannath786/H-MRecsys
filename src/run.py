@@ -31,14 +31,18 @@ def get_embeddings(g, out_dim, trained_model, nodeloader_test, num_batches_valid
             blocks = [b.to(device) for b in blocks]
         input_features = blocks[0].srcdata['features']
         if embedding_layer:
-            print(' in embedding layer')
+            #print(' in embedding layer')
             input_features['user'] = trained_model.user_embed(input_features['user'])
             input_features['item'] = trained_model.item_embed(input_features['item'])
             
         h = trained_model.get_repr(blocks, input_features)
         for ntype in h.keys():
+            try:
+                y[ntype][output_nodes[ntype]] = h[ntype]
+            except:
+                pass
             #print(y[ntype][output_nodes[ntype]])
-            y[ntype][output_nodes[ntype]] = h[ntype]
+            #y[ntype][output_nodes[ntype]] = h[ntype]
     return y
 
 
