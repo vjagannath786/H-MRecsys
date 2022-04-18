@@ -1,271 +1,151 @@
 
  
  START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 0.05 
+'n_layers': 32, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 1024, 'node_batch_size': 256, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.06808 | Validation Loss 0.04686 | 
+Epoch took 0:00:09.509516 
+
+Epoch 00001 | Training Loss 0.05048 | Validation Loss 0.05799 | 
+Epoch took 0:00:12.186794 
+
+TEST MAP 0.000% 
+
+ 
+ START - Hyperparameters 
+'n_layers': 32, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 1024, 'node_batch_size': 256, 'remove_train_eids': True 
+
+Epoch 00000 | Training Loss 0.06293 | Validation Loss 0.03753 | 
+Epoch took 0:00:09.021189 
+
+Epoch 00001 | Training Loss 0.04931 | Validation Loss 0.03866 | 
+Epoch took 0:00:12.187307 
 
 
  
  START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 0.05, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+'n_layers': 32, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 1024, 'node_batch_size': 256, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.06100 | Validation Loss 0.06191 | 
+Epoch took 0:00:08.329977 
+
+Epoch 00001 | Training Loss 0.05206 | Validation Loss 0.05089 | 
+Epoch took 0:00:10.969303 
+
+TEST MAP 0.000% 
+
+ 
+ START - Hyperparameters 
+'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.05854 | Validation Loss 0.05527 | 
+Epoch took 0:00:01.432241 
+
+Epoch 00001 | Training Loss 0.05274 | Validation Loss 0.05586 | 
+Epoch took 0:00:00.790469 
 
 
  
  START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 0.05, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
 
+Epoch 00000 | Training Loss 0.05930 | Validation Loss 0.05010 | 
+Epoch took 0:00:01.627158 
 
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 0.05, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-Epoch 00000 | Training Loss 0.14797 | Validation Loss 0.11067 | 
-Epoch took 0:00:31.788252 
-
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-Epoch 00000 | Training Loss 0.05525 | Validation Loss 0.09327 | 
-Epoch took 0:00:34.160551 
+Epoch 00001 | Training Loss 0.05484 | Validation Loss 0.04927 | 
+Epoch took 0:00:00.779060 
 
 
  
  START - Hyperparameters 
 'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
 
-Epoch 00000 | Training Loss 0.06483 | Validation Loss 0.05003 | 
-Epoch took 0:00:53.801192 
+Epoch 00000 | Training Loss 0.06415 | Validation Loss 0.04326 | 
+Epoch took 0:00:02.745740 
+
+Epoch 00001 | Training Loss 0.05290 | Validation Loss 0.05881 | 
+Epoch took 0:00:02.170303 
 
 
  
  START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
 
-Epoch 00000 | Training Loss 0.08494 | Validation Loss 0.09537 | 
-Epoch took 0:00:36.994955 
+Epoch 00000 | Training Loss 0.06562 | Validation Loss 0.07578 | 
+Epoch took 0:00:13.908319 
+
+Epoch 00001 | Training Loss 0.05436 | Validation Loss 0.05096 | 
+Epoch took 0:00:14.194203 
+
+TEST MAP 0.000% 
+
+ 
+ START - Hyperparameters 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.06906 | Validation Loss 0.10259 | 
+Epoch took 0:00:01.536623 
+
+Epoch 00001 | Training Loss 0.05521 | Validation Loss 0.06775 | 
+Epoch took 0:00:00.840050 
 
 
  
  START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
 
-Epoch 00000 | Training Loss 0.06237 | Validation Loss 0.06017 | 
-Epoch took 0:00:32.596796 
+Epoch 00000 | Training Loss 0.05843 | Validation Loss 0.06191 | 
+Epoch took 0:00:01.434993 
 
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-Epoch 00000 | Training Loss 0.05489 | Validation Loss 0.06322 | 
-Epoch took 0:00:32.251020 
+Epoch 00001 | Training Loss 0.05359 | Validation Loss 0.05165 | 
+Epoch took 0:00:00.805174 
 
 
  
  START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
 
-Epoch 00000 | Training Loss 0.05488 | Validation Loss 0.06112 | 
-Epoch took 0:00:32.848494 
+Epoch 00000 | Training Loss 0.06691 | Validation Loss 0.04013 | 
+Epoch took 0:00:01.863313 
 
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-Epoch 00000 | Training Loss 0.06480 | Validation Loss 0.07055 | 
-Epoch took 0:00:35.299989 
+Epoch 00001 | Training Loss 0.05497 | Validation Loss 0.05269 | 
+Epoch took 0:00:00.820938 
 
 
  
  START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': True 
 
-Epoch 00000 | Training Loss 0.05489 | Validation Loss 0.03896 | 
-Epoch took 0:00:28.247383 
+Epoch 00000 | Training Loss 0.05776 | Validation Loss 0.06165 | 
+Epoch took 0:00:01.773297 
 
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-Epoch 00000 | Training Loss 0.05603 | Validation Loss 0.04820 | 
-Epoch took 0:00:34.030021 
+Epoch 00001 | Training Loss 0.05189 | Validation Loss 0.04216 | 
+Epoch took 0:00:00.846323 
 
 
  
  START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-Epoch 00000 | Training Loss 0.06013 | Validation Loss 0.06149 | 
-Epoch took 0:00:37.460072 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': True 
 
 
  
  START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': True 
 
-Epoch 00000 | Training Loss 0.06138 | Validation Loss 0.07698 | 
-Epoch took 0:00:31.662023 
+Epoch 00000 | Training Loss 0.07529 | Validation Loss 0.05415 | 
+Epoch took 0:00:01.485931 
 
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-Epoch 00000 | Training Loss 0.06118 | Validation Loss 0.16323 | 
-Epoch took 0:00:29.312105 
+Epoch 00001 | Training Loss 0.05607 | Validation Loss 0.04457 | 
+Epoch took 0:00:00.769797 
 
 
  
  START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': True 
 
-Epoch 00000 | Training Loss 0.05216 | Validation Loss 0.04821 | 
-Epoch took 0:00:34.512356 
+Epoch 00000 | Training Loss 0.06737 | Validation Loss 0.05728 | 
+Epoch took 0:00:01.515807 
 
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-Epoch 00000 | Training Loss 0.05383 | Validation Loss 0.03779 | 
-Epoch took 0:00:37.321652 
-
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-Epoch 00000 | Training Loss 0.05800 | Validation Loss 0.05056 | 
-Epoch took 0:00:43.655428 
-
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-Epoch 00000 | Training Loss 0.09501 | Validation Loss 0.04085 | 
-Epoch took 0:00:37.166346 
-
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-Epoch 00000 | Training Loss 0.05779 | Validation Loss 0.03545 | 
-Epoch took 0:00:36.494884 
-
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-Epoch 00000 | Training Loss 0.12735 | Validation Loss 0.13053 | 
-Epoch took 0:00:36.083049 
-
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-Epoch 00000 | Training Loss 0.05621 | Validation Loss 0.05977 | 
-Epoch took 0:00:29.459527 
-
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-Epoch 00000 | Training Loss 0.08167 | Validation Loss 0.12026 | 
-Epoch took 0:00:33.336783 
-
-TEST MAP 0.002% 
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-Epoch 00000 | Training Loss 0.07456 | Validation Loss 0.05183 | 
-Epoch took 0:00:27.119140 
-
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-Epoch 00000 | Training Loss 0.08122 | Validation Loss 0.06682 | 
-Epoch took 0:00:25.593452 
-
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-Epoch 00000 | Training Loss 0.06821 | Validation Loss 0.08682 | 
-Epoch took 0:00:25.248340 
-
-Epoch 00001 || TRAINING Loss 0.05962 |  TRAINING MAP 0.000
-                || VALIDATION Loss 0.03834 |  VALIDATION MAP 0.000
-Epoch took 0:00:51.015807 
-
-Epoch 00002 | Training Loss 0.04908 | Validation Loss 0.03767 | 
-Epoch took 0:00:11.314697 
-
-TEST MAP 0.001% 
-
- 
- START - Hyperparameters 
-'n_layers': 10, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-Epoch 00000 | Training Loss 0.07715 | Validation Loss 0.04753 | 
-Epoch took 0:01:01.759159 
-
-Epoch 00001 || TRAINING Loss 0.03917 |  TRAINING MAP 0.000
-                || VALIDATION Loss nan |  VALIDATION MAP 0.014
-Epoch took 0:09:11.870542 
-
-Epoch 00002 | Training Loss 0.03047 | Validation Loss 0.03395 | 
-Epoch took 0:02:52.356492 
-
-
- 
- START - Hyperparameters 
-'n_layers': 32, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
-
-
- 
- START - Hyperparameters 
-'n_layers': 32, 'neg_sample_size': 1, 'neighbor_sampler': 'full', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+Epoch 00001 | Training Loss 0.04466 | Validation Loss 0.03887 | 
+Epoch took 0:00:00.860404 
 

@@ -43,24 +43,24 @@ def get_random_customers(size):
 
 if __name__ == "__main__":
 
-    unq_cstmrs = customers['customer_id'].reset_index()
+    #unq_cstmrs = customers['customer_id'].reset_index()
 
-    tmp_txns = get_random_customers(10000)
+    #tmp_txns = get_random_customers(1000)
 
-    tmp_articles = articles.loc[articles.article_id.isin(tmp_txns.article_id)]
+    #tmp_articles = articles.loc[articles.article_id.isin(tmp_txns.article_id)]
 
-    tmp_cstmrs = customers.loc[customers.customer_id.isin(tmp_txns.customer_id)]
+    #tmp_cstmrs = customers.loc[customers.customer_id.isin(tmp_txns.customer_id)]
 
-    train_df, test_df = presplit.presplit_data(tmp_txns)
+    train_df, test_df = presplit.presplit_data(txns)
     
     
-    data = utils_data.DataLoader(tmp_txns)
+    data = utils_data.DataLoader(txns)
 
     g = builder.create_graph(data.graph_schema)
 
-    g = utils_data.assign_graph_features(g,tmp_cstmrs,tmp_articles, data)
+    g = utils_data.assign_graph_features(g,customers,articles, data)
 
-    #print(g)
+    print(g)
 
     dim_dict = {'user': g.nodes['user'].data['features'].shape[1],
                 'item': g.nodes['item'].data['features'].shape[1],
@@ -80,14 +80,14 @@ if __name__ == "__main__":
 
     (train_graph, train_eids_dict, valid_eids_dict, subtrain_uids, valid_uids, test_uids, \
            all_iids, ground_truth_subtrain, ground_truth_valid, all_eids_dict) = sampling.train_valid_split(g, data.ground_truth_test, [('user', 'buys', 'item')],
-                                 0.05,0.05,{('user', 'buys', 'item'): ('item', 'bought-by', 'user')},
-                                    False)
+                                 0.05,0.1,{('user', 'buys', 'item'): ('item', 'bought-by', 'user')},
+                                    True)
     
 
     #print(train_graph)
 
     fixed_params = {'neighbor_sampler': config.neighbor_sampler, 'edge_batch_size':config.edge_batch_size, 
-                    'node_batch_size':config.node_batch_size,'remove_train_eids':False}
+                    'node_batch_size':config.node_batch_size,'remove_train_eids':True}
 
     params= {'n_layers':config.n_layers,'neg_sample_size': config.neg_sample_size }
 
@@ -120,13 +120,13 @@ if __name__ == "__main__":
 
 
     trained_model, viz, best_metrics = run.train_model(model,config.EPOCHS,num_batches_train,num_batches_val_loss, edgeloader_train,
-                    edgeloader_valid, max_margin_loss, .05,1, False, config.DEVICE, torch.optim.Adam, config.learning_rate,
-                    True, train_graph, g, nodeloader_valid, nodeloader_subtrain, config.k, config.out_dim, num_batches_val_metrics,
+                    edgeloader_valid, max_margin_loss, .05,1, config.cuda, config.DEVICE, torch.optim.Adam, config.learning_rate,
+                    False, train_graph, g, nodeloader_valid, nodeloader_subtrain, config.k, config.out_dim, num_batches_val_metrics,
                     num_batches_subtrain, None, ground_truth_subtrain, ground_truth_valid,
-                    False, 'results.txt', 0, 5, 'cos', False, embedding_layer=True)
+                    False, 'results.txt', 0, 5, config.pred, False, embedding_layer=config.embedding_layer)
 
 
-    print(best_metrics)
+    #print(trained_model)
 
 
     # Report performance on test set
@@ -138,7 +138,7 @@ if __name__ == "__main__":
                                     trained_model,
                                     nodeloader_test,
                                     num_batches_test,
-                                    False,
+                                    config.cuda,
                                     config.DEVICE,
                                     config.embedding_layer,
                                     )

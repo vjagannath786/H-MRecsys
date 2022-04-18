@@ -1,5 +1,6 @@
 import numpy as np
 import dgl
+import config
 
 
 def train_valid_split(valid_graph: dgl.DGLHeteroGraph,ground_truth_test,
@@ -94,7 +95,9 @@ def generate_dataloaders(valid_graph,
     if fixed_params['neighbor_sampler'] == 'full':
         sampler = dgl.dataloading.MultiLayerFullNeighborSampler(n_layers)
     elif fixed_params['neighbor_sampler'] == 'partial':
-        sampler = dgl.dataloading.MultiLayerNeighborSampler([1, 1, 1], replace=False)
+        sampler = dgl.dataloading.MultiLayerNeighborSampler([
+    {('user', 'buys', 'item'): 5,
+     ('item', 'bought-by', 'user'): 4}] * 3, replace=True)
     else:
         raise KeyError('Neighbor sampler {} not recognized.'.format(fixed_params['neighbor_sampler']))
 
@@ -103,11 +106,13 @@ def generate_dataloaders(valid_graph,
     )
 
     if fixed_params['remove_train_eids']:
+        '''
         edgeloader_train = dgl.dataloading.EdgeDataLoader(
             valid_graph,
             train_eids_dict,
             sampler,
-            g_sampling=train_graph,
+            device=config.DEVICE,
+            #g_sampling=train_graph,
             negative_sampler=sampler_n,
             batch_size=fixed_params.edge_batch_size,
             shuffle=True,
@@ -115,11 +120,24 @@ def generate_dataloaders(valid_graph,
             pin_memory=True,  # Helps the transfer to GPU
             num_workers=num_workers,
         )
+        '''
+
+        sampler = dgl.dataloading.as_edge_prediction_sampler(sampler, exclude='reverse_types',
+                                        reverse_etypes={'buys': 'bought-by', 'bought-by': 'buys'},
+                                        negative_sampler=sampler_n
+                                        )
+        edgeloader_train = dgl.dataloading.DataLoader(
+                            valid_graph, train_eids_dict, sampler,
+                            batch_size=fixed_params['edge_batch_size'], shuffle=True, drop_last=False, num_workers=num_workers)  
+
+
+
     else:
         edgeloader_train = dgl.dataloading.EdgeDataLoader(
             train_graph,
             train_eids_dict,
             sampler,
+            device = config.DEVICE,
             exclude='reverse_types',
             reverse_etypes={'buys': 'bought-by', 'bought-by': 'buys'},
             negative_sampler=sampler_n,
@@ -128,13 +146,15 @@ def generate_dataloaders(valid_graph,
             drop_last=False,
             pin_memory=True,
             num_workers=num_workers,
+
         )
 
     edgeloader_valid = dgl.dataloading.EdgeDataLoader(
         valid_graph,
         valid_eids_dict,
         sampler,
-        g_sampling=train_graph,
+        device=config.DEVICE,
+        #g_sampling=train_graph,
         negative_sampler=sampler_n,
         batch_size=fixed_params['edge_batch_size'],
         shuffle=True,

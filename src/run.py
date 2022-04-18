@@ -17,6 +17,7 @@ def get_embeddings(g, out_dim, trained_model, nodeloader_test, num_batches_valid
     if cuda:  # model is already on device?
         trained_model = trained_model.to(device)
     i2 = 0
+    #print(g.ntypes)
     y = {ntype: torch.zeros(g.num_nodes(ntype), out_dim)
          for ntype in g.ntypes}
     if cuda:  # not sure if I need to put the 'result' tensor to device
@@ -30,11 +31,13 @@ def get_embeddings(g, out_dim, trained_model, nodeloader_test, num_batches_valid
             blocks = [b.to(device) for b in blocks]
         input_features = blocks[0].srcdata['features']
         if embedding_layer:
+            print(' in embedding layer')
             input_features['user'] = trained_model.user_embed(input_features['user'])
             input_features['item'] = trained_model.item_embed(input_features['item'])
             
         h = trained_model.get_repr(blocks, input_features)
         for ntype in h.keys():
+            #print(y[ntype][output_nodes[ntype]])
             y[ntype][output_nodes[ntype]] = h[ntype]
     return y
 
@@ -202,9 +205,9 @@ def train_model(model, num_epochs, num_batches_train,num_batches_val_loss,edgelo
                                    model,
                                    nodeloader_subtrain,
                                    num_batches_subtrain,
-                                   cuda,
-                                   device,
-                                   embedding_layer,
+                                   True,
+                                   'cuda',
+                                   True,
                                    )
 
                 train_map = get_metrics_at_k(y,
