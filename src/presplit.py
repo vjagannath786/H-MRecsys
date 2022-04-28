@@ -2,7 +2,7 @@ import pandas as pd
 import os
 import config
 
-def presplit_data(txn_data, test_date='2020-04-01'):
+def presplit_data(txn_data, test_date='2020-09-15'):
 
 
     #txn_data = pd.read_csv(os.path.join(config.data_path,_name), index_col=False)

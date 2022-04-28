@@ -1,8 +1,8 @@
-EPOCHS = 10
+EPOCHS = 2
 DEVICE = "cuda"
 cuda = True
 learning_rate = 0.01
-data_path = '../../input/hm-parquet-files/'
+data_path = '../../input/hm-parquet/'
 result_filepath = 'results.txt'
 edge_batch_size = 2048
 node_batch_size = 128

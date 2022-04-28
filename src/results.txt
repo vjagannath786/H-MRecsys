@@ -394,3 +394,79 @@ Epoch took 0:00:08.815532
 Epoch 00005 || TRAINING Loss 0.03990 |  TRAINING MAP 0.000
                 || VALIDATION Loss 0.05690 |  VALIDATION MAP 0.000
 TEST MAP 0.000% 
+
+ 
+ START - Hyperparameters 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.04941 | Validation Loss 0.04949 | 
+Epoch took 0:00:10.243946 
+
+
+ 
+ START - Hyperparameters 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.05065 | Validation Loss 0.05199 | 
+Epoch took 0:00:06.072633 
+
+Epoch 00001 || TRAINING Loss 0.02298 |  TRAINING MAP 0.001
+                || VALIDATION Loss 0.02384 |  VALIDATION MAP 0.001
+Epoch took 0:05:09.428560 
+
+
+ 
+ START - Hyperparameters 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.05153 | Validation Loss 0.05094 | 
+Epoch took 0:00:05.681551 
+
+
+ 
+ START - Hyperparameters 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.05077 | Validation Loss 0.05010 | 
+Epoch took 0:00:04.863372 
+
+Epoch 00001 || TRAINING Loss 0.02323 |  TRAINING MAP 0.000
+                || VALIDATION Loss 0.02484 |  VALIDATION MAP 0.002
+Epoch took 0:05:09.406131 
+
+Epoch 00002 | Training Loss 0.02100 | Validation Loss 0.02432 | 
+Epoch took 0:00:31.729874 
+
+Epoch 00003 | Training Loss 0.02011 | Validation Loss 0.02051 | 
+Epoch took 0:00:32.175085 
+
+Epoch 00004 | Training Loss 0.01965 | Validation Loss 0.01875 | 
+Epoch took 0:00:31.435826 
+
+Epoch 00005 | Training Loss 0.01943 | Validation Loss 0.01933 | 
+Epoch took 0:00:31.955899 
+
+Epoch 00006 | Training Loss 0.01899 | Validation Loss 0.01806 | 
+Epoch took 0:00:31.480703 
+
+Epoch 00007 | Training Loss 0.01869 | Validation Loss 0.01748 | 
+Epoch took 0:00:31.835826 
+
+Epoch 00008 | Training Loss 0.01864 | Validation Loss 0.01786 | 
+Epoch took 0:00:31.689183 
+
+Epoch 00009 | Training Loss 0.01829 | Validation Loss 0.01748 | 
+Epoch took 0:00:31.324740 
+
+
+ 
+ START - Hyperparameters 
+'n_layers': 64, 'neg_sample_size': 1, 'neighbor_sampler': 'partial', 'edge_batch_size': 2048, 'node_batch_size': 128, 'remove_train_eids': False 
+
+Epoch 00000 | Training Loss 0.05164 | Validation Loss 0.05162 | 
+Epoch took 0:00:05.069473 
+
+Epoch 00001 || TRAINING Loss 0.02306 |  TRAINING MAP 0.001
+                || VALIDATION Loss 0.02541 |  VALIDATION MAP 0.000
+Epoch took 0:05:13.286942 
+

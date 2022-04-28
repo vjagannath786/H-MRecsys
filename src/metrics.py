@@ -4,7 +4,7 @@ import torch.nn as nn
 import torch
 
 from utils import softmax
-
+from tqdm import tqdm
 
 
 
@@ -89,7 +89,7 @@ def get_recs(g,
         model = model.to(device)
     print('Computing recommendations on {} users, for {} items'.format(len(user_ids), g.num_nodes('item')))
     recs = {}
-    for user in user_ids:
+    for user in tqdm(user_ids):
         user_emb = h['user'][user]
         #already_bought = already_bought_dict[user]
         user_emb_rpt = torch.cat(g.num_nodes('item')*[user_emb]).reshape(-1, embed_dim)
@@ -119,6 +119,7 @@ def get_recs(g,
         '''
         rec = order[:k]
         recs[user] = rec
+        #print('recommendation done')
     return recs
 
 

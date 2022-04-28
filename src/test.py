@@ -21,6 +21,8 @@ articles = pd.get_dummies(articles, columns=['section_name','colour_group_name']
 
 customers['gender'] = 1
 
+unq_cstmrs = customers['customer_id'].reset_index()
+
 
 def get_random_customers(size):
     
@@ -45,24 +47,31 @@ def get_random_customers(size):
 
 if __name__ == "__main__":
 
-    unq_cstmrs = customers['customer_id'].reset_index()
+    
 
-    tmp_txns = get_random_customers(1000)
+    #tmp_txns = get_random_customers(1000)
+    tmp_txns = txns.loc[txns.t_dat >= pd.to_datetime('2020-09-01')]
+
+    #print(tmp_txns.shape)
 
     tmp_articles = articles.loc[articles.article_id.isin(tmp_txns.article_id)]
 
     tmp_cstmrs = customers.loc[customers.customer_id.isin(tmp_txns.customer_id)]
 
-    train_df, test_df = presplit.presplit_data(tmp_txns)
+    #train_df, test_df = presplit.presplit_data(tmp_txns)
     
+
+    #print(tmp_txns.customer_id.nunique())
     
     data = utils_data.DataLoader(tmp_txns)
 
     g = builder.create_graph(data.graph_schema)
 
+    print(g)
+
     g = utils_data.assign_graph_features(g,tmp_cstmrs,tmp_articles, data)
 
-    print(g)
+    
 
     dim_dict = {'user': g.nodes['user'].data['features'].shape[1],
                 'item': g.nodes['item'].data['features'].shape[1],
@@ -74,7 +83,7 @@ if __name__ == "__main__":
 
     model = ConvModel(g, config.n_layers, dim_dict, True, config.drop_out, config.aggregator_type, config.pred, config.aggregator_hetero, True)
 
-    #print(model)
+    print('model initiated')
 
     if config.DEVICE == 'cuda':
         model = model.to(config.DEVICE)
@@ -86,7 +95,7 @@ if __name__ == "__main__":
                                     False)
     
 
-    #print(train_graph)
+    print('sampling done')
 
     fixed_params = {'neighbor_sampler': config.neighbor_sampler, 'edge_batch_size':config.edge_batch_size, 
                     'node_batch_size':config.node_batch_size,'remove_train_eids':False}

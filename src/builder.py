@@ -6,17 +6,27 @@ import torch
 def create_ids(txns_data):
 
     # Create user ids
-    cstmr_id = pd.DataFrame(txns_data['customer_id'].unique(),
-                          columns=['customer_id'])
-    cstmr_id['cstmr_new_id'] = cstmr_id.index
+    #cstmr_id = pd.DataFrame(txns_data['customer_id'].unique(),
+    #                      columns=['customer_id'])
+
+    cstmr_id = txns_data[['customer_id']].drop_duplicates()
+
+    cstmr_id['cstmr_new_id'] = np.arange(cstmr_id.shape[0])
 
 
+    #print(cstmr_id)
+    
     # create item ids
-    itm_id = pd.DataFrame(txns_data['article_id'].unique(),
-                          columns=['article_id'])
-    itm_id['itm_new_id'] = itm_id.index
+    #itm_id = pd.DataFrame(txns_data['article_id'].unique(),
+    #                      columns=['article_id'])
+
+    itm_id = txns_data[['article_id']].drop_duplicates()
+    
+    itm_id['itm_new_id'] = np.arange(itm_id.shape[0])
 
     #print(itm_id['itm_new_id'].nunique())
+
+    #print(f'length of all customers {len(cstmr_id.cstmr_new_id.values)}')
 
     return cstmr_id, itm_id
 
@@ -45,8 +55,8 @@ def df_to_adjancency_list(txns_data_train,txns_data_test, cstmr_id, itm_id):
                                             on='article_id')
 
 
-
-    print(len(txns_data_train.itm_new_id.values))
+    #print(f'len customers in train {len(txns_data_train.cstmr_new_id.values)}')
+    #print(len(txns_data_train.itm_new_id.values))
     adjacency_dict.update(
             {
                 'user_item_src': txns_data_train.cstmr_new_id.values,
@@ -76,21 +86,28 @@ def import_features(g, customers, articles, cstmr_id, itm_id):
     feature_dict = {}
 
     # User
+
+    print()
     
-    customers = customers.merge(cstmr_id, how='left', on='customer_id')
+    customers = customers.merge(cstmr_id, how='inner', on='customer_id')
 
     #customers.drop_duplicates(inplace=True)
 
     customers.age.fillna(20, inplace=True)
 
-    #print(customers.columns)
+    #print(customers)
     
-    ids = customers.cstmr_new_id.values.astype('int')
+    ids = customers.cstmr_new_id.values
+
+    #ids = ids[1:]
+    #print(ids)
     feats = np.stack((customers.age.values,
                         customers.gender.values),
                      axis=1)
 
     user_feat = np.zeros((g.number_of_nodes('user'), 2))
+
+    #print(user_feat.shape)
     user_feat[ids] = feats
 
     user_feat = torch.tensor(user_feat).float()
@@ -137,7 +154,7 @@ def import_features(g, customers, articles, cstmr_id, itm_id):
 
 
 
-
+    print('import feature done')
 
     
 

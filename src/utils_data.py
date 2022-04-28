@@ -6,7 +6,7 @@ import os
 class DataLoader:
     def __init__(self, txn_data):
         self.user_item_train, self.user_item_test = presplit.presplit_data(txn_data)
-        self.cstmrs_id, self.item_id = builder.create_ids(txn_data)
+        self.cstmrs_id, self.item_id = builder.create_ids(self.user_item_train)
 
         self.adjacency_dict, self.ground_truth_test = builder.df_to_adjancency_list(self.user_item_train,self.user_item_test, self.cstmrs_id, self.item_id)
 
