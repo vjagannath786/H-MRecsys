@@ -66,7 +66,7 @@ def train_valid_split(valid_graph: dgl.DGLHeteroGraph,ground_truth_test,
 
     # Generate inference nodes for test
     test_uids, _ = ground_truth_test
-    test_uids = np.unique(test_uids)
+    test_uids = np.unique(test_uids).astype('int')
     all_iids = np.arange(valid_graph.num_nodes('item'))
 
     return train_graph, train_eids_dict, valid_eids_dict, subtrain_uids, valid_uids, test_uids, \
@@ -187,6 +187,8 @@ def generate_dataloaders(valid_graph,
     if 'sport' in valid_graph.ntypes:
         test_node_ids['sport'] = all_sids
 
+    print(test_node_ids)
+
     nodeloader_test = dgl.dataloading.NodeDataLoader(
         valid_graph,
         test_node_ids,
@@ -196,5 +198,8 @@ def generate_dataloaders(valid_graph,
         drop_last=False,
         num_workers=num_workers
     )
+
+
+    #print(nodeloader_test)
 
     return edgeloader_train, edgeloader_valid, nodeloader_subtrain, nodeloader_valid, nodeloader_test
